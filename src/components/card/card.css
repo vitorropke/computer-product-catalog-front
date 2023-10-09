@@ -1,16 +1,49 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    border-radius: 8px;
+    border-radius: 8px 8px 8px 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 0;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: 170px 30px;
+    max-width: 500px;
+    max-height: 200px;
+    overflow: scroll;
+    padding: 20px;
+    white-space: nowrap;
+}
+
+.card h2 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.red-text {
+    color: red;
+}
+
+.yellow-text {
+    color: yellow;
+}
+
+.card h4 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.card:hover {
+    background-color: darkgray;
 }
 
 .card img {
-    border-radius: 8px 8px 0 0;
-    width: 250px;
+    border-radius: 8px 8px 8px 8px;
     height: 200px;
+    width: 200px;
+}
+
+.card-image {
+    height: 200px;
+    width: 200px;
+}
+
+.card-content {
+    margin-top: 12px;
 }
