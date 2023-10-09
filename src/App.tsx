@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { Card } from './components/card/card';
 import { getProducts } from './hooks/getProducts';
-import { CreateModal } from './components/create-modal/create-modal';
+import { CreateModal } from './components/modals/create-modal';
 
 function App() {
   const { products } = getProducts();
@@ -18,6 +18,7 @@ function App() {
         {products?.map(product =>
           <Card
             key={product.id}
+            id={product.id}
             brand={product.brand}
             model={product.model}
             batch={product.batch}

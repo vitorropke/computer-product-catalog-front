@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { setProduct } from '../../hooks/setProduct';
 import { Product } from '../../interface/Product';
-import './create-modal.css';
+import './modal.css';
 
 interface InputProps {
     label: string;
@@ -60,16 +60,24 @@ export function CreateModal({ closeModal }: ModalProps) {
             <div className='modal-body'>
                 <h1>Cadastro de produto</h1>
                 <form className='input-container'>
-                    <Input label='Fabricante' value={brand} updatedValue={setBrand} />
-                    <Input label='Modelo' value={model} updatedValue={setModel} />
-                    <Input label='Lote' value={batch} updatedValue={setBatch} />
-                    <Input label='Quantidade' value={quantity} updatedValue={setQuantity} />
-                    <Input label='Preço' value={price} updatedValue={setPrice} />
-                    <Input label='Desconto' value={discount} updatedValue={setDiscount} />
+                    <div>
+                        <Input label='Fabricante' value={brand} updatedValue={setBrand} />
+                        <Input label='Modelo' value={model} updatedValue={setModel} />
+                    </div>
+                    <div>
+                        <Input label='Lote' value={batch} updatedValue={setBatch} />
+                        <Input label='Quantidade' value={quantity} updatedValue={setQuantity} />
+                    </div>
+                    <div>
+                        <Input label='Preço' value={price} updatedValue={setPrice} />
+                        <Input label='Desconto' value={discount} updatedValue={setDiscount} />
+                    </div>
                     <Input label='Imagem' value={imageUrl} updatedValue={setImageUrl} />
                 </form>
-                <button onClick={closeModal} className='btn-secondary'>Cancelar</button>
-                <button onClick={submit} className='btn-secondary'>Cadastrar</button>
+                <div className='buttons-container'>
+                    <button onClick={closeModal} className='btn-secondary'>Cancelar</button>
+                    <button onClick={submit} className='btn-secondary'>Cadastrar</button>
+                </div>
             </div>
         </div>
     );
