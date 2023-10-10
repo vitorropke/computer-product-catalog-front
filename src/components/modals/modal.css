@@ -34,7 +34,6 @@
     display: grid;
     grid-template-columns: 300px 300px 1fr;
     grid-template-rows: 200px 100px;
-    
 }
 
 .modal-overlay .modal-body input {

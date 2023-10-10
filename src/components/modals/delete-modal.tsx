@@ -16,7 +16,6 @@ export function DeleteModal({ product, closeModal }: ModalProps) {
     }
 
     useEffect(() => {
-        console.log('isSuccess', isSuccess);
         if (!isSuccess) {
             return;
         }
